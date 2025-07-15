@@ -36,7 +36,7 @@
 3.请打开设置中的保持地图缩放功能，保证每次开始作战后地图都缩放到最小（如："示意图/8-1N/地图缩放示例.png"），且开始战斗后无需拖动地图即可点击到所有需要点击地点，且需要点击的点位无UI遮挡（基于以上几条，建议在使用脚本前自己成功拖一遍尸确保以上条件均已满足）。
 
 <p align="center">
-  <img alt="example" src="https://cdn.jsdelivr.net/gh/LeonNagant/MaaGF1_Test/example_img/map_example.png" width="1600" height="1024" />
+  <img alt="example" src="https://cdn.jsdelivr.net/gh/LeonNagant/MaaGF1_Test/example_img/8-1N/map_example.png" width="1600" height="1024" />
 </p>
 
 4.该方案清理装备基于选择特殊装备（即专属装备）进行强化，请确保点开装备强化页面后即有可选择的特殊装备。同时，您需要锁定想保留的、在自动选择范围（二三四星装备）内的装备。未来学会写GUI和分支后会添加拆解装备的选项。
