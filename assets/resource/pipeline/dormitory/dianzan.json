@@ -1,0 +1,31 @@
+{
+        "=宿舍自动点赞":{
+                "next":[
+                        "点击点赞"
+                ]
+        },
+        "点击点赞":{
+                "recognition":"TemplateMatch",
+                "template": ["dormitory/dianzan.png","dormitory/hudong.png"],
+                "action":"Click",
+                "next":[
+                        "点击下一个宿舍"
+                ]
+        },
+        "点击下一个宿舍":{
+                "recognition":"TemplateMatch",
+                "template": "dormitory/next.png",
+                "action":"Click",
+                "post_delay": 200,
+                "next":[
+                        "点击点赞"
+                ]
+        },
+        "离开参观":{
+                "recognition": "TemplateMatch",
+                "template": "dormitory/message.png",
+                "action": "Click",
+                "target":[64,62,0,0],
+                "next":[]
+        }
+}

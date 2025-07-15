@@ -1,0 +1,389 @@
+{
+    "=8_1N总流程":{
+        "recognition": "OCR",
+        "expected" : ["巨鹰与寒鸦","开始作战"],
+        "next":[
+            "炸狗队布置",
+            "点击8_1N",
+            "弹药检查#8_1N",
+            "布置完成8_1N"]
+    },
+    "点击8_1N":{
+        "recognition": "OCR",
+        "expected":["8-1"],
+        "action": "Click",
+        "next":["普通作战"]
+    },
+    "普通作战":{
+        "recognition": "OCR",
+        "roi" : [824,552,150,90],
+        "expected":["普通作战"],
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["炸狗队布置",
+            "弹药检查#8_1N",
+            "装备强化#8_1N"]
+    },
+    "布置完成8_1N":{
+        "recognition": "TemplateMatch",
+        "roi" : [930,93,300,240],
+        "template": "combat/8-1N/team2_map.png",
+        "next":["弹药检查#8_1N"]
+    },
+    "炸狗队布置":{
+        "recognition": "TemplateMatch",
+        "roi" : [100,470,300,240],
+        "template": "combat/8-1N/port_exp.png",
+        "action": "Click",
+        "next":[
+            "布置完成8_1N",
+            "全是bug的炸狗队确定",
+            "炸狗队布置",
+            "炸狗队布置进入编成修正"
+        ]
+    },
+    "炸狗队布置进入编成修正":{
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/back2map.png",
+        "action": "Click",
+        "next":["炸狗队布置"]
+    },
+    "全是bug的炸狗队确定":{
+        "recognition": "TemplateMatch",
+        "roi" : [933,556,180,100],
+        "template" : "combat/8-1N/dplyconfirm.png",
+        "target": [996,608,5,5],
+        "action": "Click",
+        "next":["单zas队布置"]
+    },
+    "单zas队确定":{
+        "recognition": "OCR",
+        "roi" : [933,556,180,100],
+        "expected":["确定"],
+        "action": "Click",
+        "next":["狗粮队布置"]
+    },
+    "狗粮队布置":{
+        "recognition": "TemplateMatch",
+        "roi" : [850,450,300,240],
+        "template": "combat/8-1N/port_abd.png",
+        "action": "Click",
+        "next":["狗粮队确定","狗粮队布置"],
+        "interrupt":["重装机场选择梯队"]
+    },
+    "单zas队布置":{
+        "recognition": "TemplateMatch",
+        "roi" : [930,93,300,240],
+        "template": "combat/8-1N/port_zas.png",
+        "action": "Click",
+        "post_delay": 1500,
+        "pre_delay": 1500,
+        "next":["单zas队确定","单zas队布置"],
+        "interrupt":["重装机场选择梯队"]
+    },
+    "狗粮队确定":{
+        "recognition": "OCR",
+        "roi" : [933,556,180,100],
+        "expected":["确定"],
+        "action": "Click",
+        "post_delay": 1200,
+        "next":["弹药检查#8_1N"]
+    },
+    "重装机场选择梯队":{
+        "recognition":"OCR",
+        "expected":"选择梯队",
+        "action": "Click"
+    },
+    "弹药检查#8_1N":{
+        "recognition": "TemplateMatch",
+        "roi" : [930,93,300,240],
+        "template": ["combat/8-1N/port_zas.png","combat/8-1N/team2_map.png"],
+        "action": "Click",
+        "post_delay": 1500,
+        "next":[
+            "弹药判断无#8_1N",
+            "弹药判断有#8_1N",
+            "弹药检查#8_1N"
+        ],
+        "interrupt":["点击部署界面2队"]
+    },
+    "点击部署界面2队":{
+        "recognition": "TemplateMatch",
+        "roi" : [10,220,140,100],
+        "template": "combat/8-1N/team2_dply.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next":["弹药检查#8_1N"]
+        },
+    "弹药判断无#8_1N":{
+        "recognition": "TemplateMatch",
+        "roi" : [100,160,220,450],
+        "template": "combat/8-1N/Gnoammo.png",
+        "green_mask": true,
+        "next":["无弹药不编成#8_1N"]
+        
+    },
+    "弹药判断有#8_1N":{
+        "recognition": "TemplateMatch",
+        "roi" : [100,160,220,450],
+        "template": "combat/8-1N/fullammo.png",
+        "green_mask": true,
+        "next":["点击队伍编成#8_1N编队"]
+        
+    },
+    "无弹药不编成#8_1N":{
+        "recognition": "OCR",
+        "expected":["取消"],
+        "action": "Click",
+        "next":"开始作战8_1N"
+    },
+    "点击队伍编成#8_1N编队":{
+        "roi" : [114,551,234,97],
+        "recognition": "TemplateMatch",
+        "template":"combat/8-1N/dwbc.png",
+        "target" : [183,597,77,13],
+        "action": "Click",
+        "next":["选择2队zas#8_1N编队"]
+    },
+    "选择2队zas#8_1N编队":{
+        "recognition": "OCR",
+        "expected":["Zas M21"],
+        "action": "Click",
+        "post_delay": 2000,
+        "next":["显示全部#8_1N编队","点击队伍编成#8_1N编队"]
+    },
+    "显示全部#8_1N编队":{
+        "recognition": "OCR",
+        "expected":["显示全部"],
+        "action": "Click",
+        "next":["选择收藏角色#8_1N编队"]
+    },
+    "选择收藏角色#8_1N编队":{
+        "recognition": "OCR",
+        "expected":["显示收藏角色"],
+        "action": "Click",
+        "next":["选择收藏角色确认#8_1N编队"]
+    },
+    "选择收藏角色确认#8_1N编队":{
+        "recognition": "OCR",
+        "expected":["确认"],
+        "action": "Click",
+        "post_delay": 500,
+        "next":["点击队伍中的Zas#8_1N编队"]
+    },
+    "点击队伍中的Zas#8_1N编队":{
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/zas_in_team.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next":["点击1队Zas#8_1N编队"]
+    },
+    "点击1队Zas#8_1N编队":{
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/zas_team1.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next":["确定#8_1N编队"]
+    },
+    "确定#8_1N编队":{
+        "recognition": "OCR",
+        "expected":["确定"],
+        "action": "Click",
+        "next":["返回地图8_1N"]
+    },
+    "返回地图8_1N":{
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/back2map.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next":["开始作战8_1N","返回地图8_1N"]
+    },
+    "开始作战8_1N":{
+        "recognition": "OCR",
+        "expected":["开始作战"],
+        "action": "Click",
+        "next":[
+            "点击2队单zas#8_1N补给",
+            "装备强化#8_1N"
+        ]
+    },
+    "点击2队单zas#8_1N补给":{
+        "recognition": "TemplateMatch",
+        "roi" : [930,93,300,240],
+        "template": "combat/8-1N/team2_map.png",
+        "action": "Click",
+        "next":["点击补给8_1N",
+                "点击2队单zas#8_1N补给"
+            ]
+    },
+    "点击补给8_1N":{
+        "recognition": "OCR",
+        "expected":["补给"],
+        "action": "Click",
+        "next":["点击2队单zas#8_1N撤离"]  
+    },
+    "点击2队单zas#8_1N撤离":{
+        "recognition": "TemplateMatch",
+        "roi" : [930,93,300,240],
+        "template": "combat/8-1N/team2_map.png",
+        "action": "Click",
+        "next":["点击2队撤离#8_1N撤离","点击2队单zas#8_1N撤离"]
+    },
+    "点击2队撤离#8_1N撤离":{
+        "recognition": "OCR",
+        "expected":["撤离"],
+        "action": "Click",
+        "next":["点击2队撤离确定#8_1N撤离"]  
+    },
+    "点击2队撤离确定#8_1N撤离":{
+        "recognition": "OCR",
+        "expected":["确定"],
+        "action": "Click",
+        "next":["点击1队图标"]  
+    },
+    "点击1队图标":{
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/expteam_map.png",
+        "roi" : [100,470,300,240],
+        "action": "Click",
+        "post_delay": 800,
+        "next":["点击1队图标#8_1N确认"]  
+    },
+    "点击1队图标#8_1N确认":{
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/expteam_map.png",
+        "action": "Click",
+        "post_delay": 800,
+        "next":[
+            "点击1队取消#8_1N确认",
+            "点击1队图标#8_1N确认"
+        ]  
+    },
+    "点击1队取消#8_1N确认":{
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/cancel.png",
+        "action": "Click",
+        "post_delay": 1200,
+        "next":["点击计划模式8_1N"]  
+    },
+    "点击计划模式8_1N":{
+        "recognition": "OCR",
+        "expected":["计划模式"],
+        "action": "Click",
+        "post_delay": 1500,
+        "next":["炸狗点1"]  
+    },
+
+    "炸狗点1":{
+        "recognition": "TemplateMatch",
+        "roi" : [40,250,300,300],
+        "template": "combat/8-1N/dog1.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next":["炸狗点1#确认","炸狗点1#OCR确认","炸狗点1"]
+    },
+    "炸狗点2":{
+        "recognition": "TemplateMatch",
+        "roi" : [200,50,250,250],
+        "template": "combat/8-1N/dog2.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next":["炸狗点2#确认","炸狗点2#OCR确认","炸狗点2"]
+    },
+    "炸狗点1#确认":{
+        "recognition": "TemplateMatch",
+        "roi" : [40,250,300,300],
+        "template": ["combat/8-1N/Gchoose1.png","combat/8-1N/Gchoose2.png","combat/8-1N/G03.png"],
+        "green_mask": true,
+        "next":["炸狗点2"]
+        
+    },
+    "炸狗点2#确认":{
+        "recognition": "TemplateMatch",
+        "roi" : [200,50,250,250],
+        "template": ["combat/8-1N/Gchoose1.png","combat/8-1N/Gchoose2.png","combat/8-1N/G06.png"],
+        "green_mask": true,
+        "next":["执行计划#8_1N"]
+    },
+     "炸狗点1#OCR确认":{
+        "recognition": "OCR",
+        "roi" : [40,250,300,300],
+        "expected":["03"],
+        "next":["炸狗点2"]
+    },
+    "炸狗点2#OCR确认":{
+        "recognition": "OCR",
+        "roi" : [200,50,250,250],
+        "expected":["06"],
+        "green_mask": true,
+        "next":["执行计划#8_1N"]
+    },
+    "执行计划#8_1N":{
+        "recognition": "OCR",
+        "expected":["执行计划"],
+        "action": "Click",
+        "post_delay": 110000,
+        "next":["剩余行动01"]  
+    },
+    "剩余行动01":{
+        "recognition": "OCR",
+        "roi" : [840,630,180,90],
+        "expected":["01","03"],
+        "timeout": 60000,
+        "next":["点击1队图标#8_1N撤离"]  
+    },
+    "点击1队图标#8_1N撤离":{
+        "recognition": "TemplateMatch",
+        "roi" : [212,114,664,477],
+        "template": "combat/8-1N/expteam_map.png",
+        "action": "Click",
+        "next":[
+            "点击1队图标#8_1N撤离",
+            "点击1队撤离#8_1N撤离"
+        ] 
+    },
+    "点击1队撤离#8_1N撤离":{
+        "recognition": "OCR",
+        "expected":["撤离"],
+        "action": "Click",
+        "next":["点击1队撤离确定#8_1N撤离"]  
+    },
+    "点击1队撤离确定#8_1N撤离":{
+        "recognition": "OCR",
+        "expected":["确定"],
+        "action": "Click",
+        "next":["终止作战菜单#8_1N"]  
+    },
+    "终止作战菜单#8_1N":{
+        "recognition": "OCR",
+        "expected":["终止作战"],
+        "action": "Click",
+        "next":["重新作战#8_1N"]  
+    },
+    "重新作战#8_1N":{
+        "recognition": "OCR",
+        "roi" : [344,445,185,65],
+        "expected":["重新作战"],
+        "action": "Click",
+        "next":[
+            
+            "布置完成8_1N"
+        ]  
+    },
+    "装备强化#8_1N":{
+        "recognition": "OCR",
+        "roi" : [675,301,182,90],
+        "expected":["装备强化"],
+        "action": "Click",
+        "next":["=装备强化总流程"]  
+    },
+    "1测试":{
+        "recognition": "OCR",
+        "roi" : [933,556,180,100],
+        "expected":["确定"],
+        "target": [996,608,5,5],
+        "action": "Click",
+        "next":[]
+    }
+
+}

@@ -1,0 +1,60 @@
+{
+    "=人形回收总流程":{
+        "recognition": "OCR",
+        "expected":["资源回收"],
+        "next":["资源回收"]
+    },
+    "资源回收":{
+        "recognition": "OCR",
+        "expected":["资源回收"],
+        "action": "Click",
+        "next":["选择角色"]
+    },
+    "选择角色":{
+        "recognition": "OCR",
+        "expected":["角色"],
+        "action": "Click",
+        "next":["智能选择"]
+    },
+    "智能选择":{
+        "recognition": "OCR",
+        "expected":["智能选择","没有可供回收"],
+        "action": "Click",
+        "next":[
+            "手动选择",
+            "人形拆解选择确定"
+        ]
+    },
+    "手动选择":{
+        "recognition": "TemplateMatch",
+        "green_mask":true,
+        "template":[
+            "storage/Gframe1.png",
+            "storage/Gframe2.png"
+        ],
+        "threshold":0.85,
+        "action": "Click",
+        "next":[
+            "手动选择",
+            "人形拆解选择确定"
+        ]
+    },
+    "人形拆解选择确定":{
+        "recognition": "OCR",
+        "expected":["确定"],
+        "action": "Click",
+        "next":["回收"]
+    },
+    "回收":{
+        "recognition": "OCR",
+        "roi" : [899,582,172,70],
+        "expected":["回收"],
+        "action": "Click",
+        "next":["强制确定"]
+    },
+    "强制确定":{
+        "recognition":"DirectHit",
+        "action": "Click",
+        "target":[640,590,49,24] 
+    }
+}

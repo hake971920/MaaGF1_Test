@@ -1,0 +1,24 @@
+{
+        "=点击爱心":{
+                "roi": [
+            2,
+            250,
+            1103,
+            250
+        ],
+                "recognition":"TemplateMatch",
+                "template": "dormitory/Gheart.png",
+                "threshold":0.7,
+                "action":"Click",
+                "green_mask": true,
+                "next":[
+                        "=点击爱心"
+                ],
+                "timeout": 20000
+                
+        },
+        "StopTask":{
+                "recognition": "DirectHit",
+                "action": "StopTask"
+        }
+}

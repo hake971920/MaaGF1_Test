@@ -1,0 +1,85 @@
+{
+    "=装备强化总流程":{
+        "recognition": "OCR",
+        "expected":["研发"],
+        "next":["装备强化"]
+    },
+    "装备强化":{
+        "recognition": "OCR",
+        "expected":["装备强化"],
+        "action": "Click",
+        "next":["选择强化的装备"]
+    },
+    "选择强化的装备":{
+        "recognition": "TemplateMatch",
+        "template": "storage/slct_equip.png",
+        "action": "Click",
+        "target": [215,310,10,40],
+        "post_delay": 1500,
+        "next":["选择高级装备"]
+    },
+    "选择高级装备":{
+        "recognition": "TemplateMatch",
+        "template": [
+            "storage/g_equip1.png"
+        ],
+	"post_delay": 1000,
+	"pre_delay": 1000,
+        "threshold":0.9,
+        "action": "Click",
+        "next":["选择低级装备","选择高级装备"]
+    },
+    "选择低级装备":{
+        "recognition": "TemplateMatch",
+        "template": "storage/stdby.png",
+        "action": "Click",
+        "next":["强制点击至无智能选择"]
+    },
+    "强制点击至无智能选择":{
+        "recognition": "OCR",
+        "expected":["智能选择"],
+        "action": "Click",
+        "next":[
+            "强制点击至无智能选择",
+            "装备强化选择确定"
+        ]
+    },
+    "装备强化选择确定":{
+        "recognition": "OCR",
+        "expected":["确定"],
+        "action": "Click",
+        "next":[
+            "装备强化确定"
+        ]
+    },
+    "装备强化确定":{
+        "recognition": "OCR",
+        "expected":["确定"],
+        "action": "Click",
+        "next":[
+            "装备强化最终确定"
+        ]
+    },
+    "装备强化最终确定":{
+        "recognition": "OCR",
+        "expected":["确定"],
+        "action": "Click",
+        "post_delay": 1000,
+        "next":["装备强化最终确定","进入导航栏"]
+    },
+    "进入导航栏":{
+        "recognition": "TemplateMatch",
+        "roi" : [124,18,120,105],
+        "template": "storage/navi.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next":["导航栏战斗"]
+    },
+    "导航栏战斗":{
+        "recognition": "TemplateMatch",
+        "roi" : [80,150,100,150],
+        "template": "storage/navi_combat.png",
+        "action": "Click",
+        "next":["=8_1N总流程"]
+    },
+}
