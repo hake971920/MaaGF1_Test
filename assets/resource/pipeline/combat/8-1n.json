@@ -329,7 +329,7 @@
         "recognition": "OCR",
         "roi" : [300,100,380,270],
         "expected" : "794",
-        "post_delay": 7000,
+        "post_delay": 8000,
         "next":["加速结算#8_1N","跳过获得装备#8_1N","梯队遇敌#8_1N","剩余行动01"]
     },
     "跳过获得装备#8_1N":{
@@ -337,13 +337,13 @@
         "roi" :  [0,4,120,127],
         "template": "combat/8-1N/eqip_get.png",
         "action": "Click",
+        "threshold":0.9,
        "next":["跳过获得装备#8_1N","剩余行动01","梯队遇敌#8_1N","加速结算#8_1N"]
     },
     "加速结算#8_1N":{
         "recognition": "OCR",
         "roi" : [0,5,270,75],
         "expected" : "战斗结算",
-        "post_delay": 2000,
         "action": "Click",
         "next":["剩余行动01","梯队遇敌#8_1N","跳过获得装备#8_1N","加速结算#8_1N"]
     },
