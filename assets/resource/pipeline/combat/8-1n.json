@@ -203,6 +203,7 @@
         "recognition": "OCR",
         "expected":["开始作战"],
         "action": "Click",
+        "post_delay": 4000,
         "next":[
             "点击2队单zas#8_1N补给",
             "装备强化#8_1N"
@@ -213,6 +214,8 @@
         "roi" : [930,93,300,240],
         "template": "combat/8-1N/team2_map.png",
         "action": "Click",
+        "pre_delay": 1000,
+        "post_delay": 1000,
         "next":["点击补给8_1N",
                 "点击2队单zas#8_1N补给"
             ]
