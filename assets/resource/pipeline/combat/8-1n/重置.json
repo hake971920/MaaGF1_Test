@@ -1,0 +1,103 @@
+{
+    "剩余行动01_8_1N战斗": {
+        "recognition": "OCR",
+        "roi": [
+            840,
+            630,
+            180,
+            90
+        ],
+        "expected": [
+            "01"
+        ],
+        "timeout": 60000,
+        "pre_delay": 1000,
+        "next": [
+            "点击1队图标_8_1N重置"
+        ]
+    },
+    "点击1队图标_8_1N重置": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            212,
+            114,
+            664,
+            477
+        ],
+        "template": "combat/8-1N/expteam_map.png",
+        "action": "Click",
+        "next": [
+            "点击1队图标_8_1N重置",
+            "点击1队撤离_8_1N重置",
+            "点击1队图标_8_1N重置修正识别"
+        ]
+    },
+    "点击1队图标_8_1N重置修正识别": {
+        "recognition": "OCR",
+        "roi": [
+            724,
+            43,
+            294,
+            90
+        ],
+        "expected": "第一梯队",
+        "action": "Click",
+        "target": [
+            60,
+            70,
+            10,
+            10
+        ],
+        "pre_delay": 1000,
+        "post_delay": 1000,
+        "next": [
+            "点击1队图标_8_1N重置"
+        ]
+    },
+    "点击1队撤离_8_1N重置": {
+        "recognition": "OCR",
+        "expected": [
+            "撤离"
+        ],
+        "action": "Click",
+        "next": [
+            "点击1队撤离确定_8_1N重置"
+        ]
+    },
+    "点击1队撤离确定_8_1N重置": {
+        "recognition": "OCR",
+        "expected": [
+            "确定"
+        ],
+        "action": "Click",
+        "next": [
+            "终止作战菜单_8_1N重置"
+        ]
+    },
+    "终止作战菜单_8_1N重置": {
+        "recognition": "OCR",
+        "expected": [
+            "终止作战"
+        ],
+        "action": "Click",
+        "next": [
+            "重新作战_8_1N重置"
+        ]
+    },
+    "重新作战_8_1N重置": {
+        "recognition": "OCR",
+        "roi": [
+            344,
+            445,
+            185,
+            65
+        ],
+        "expected": [
+            "重新作战"
+        ],
+        "action": "Click",
+        "next": [
+            "布置完成_8_1N部署"
+        ]
+    }
+}

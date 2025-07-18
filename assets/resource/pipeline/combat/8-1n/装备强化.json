@@ -1,24 +1,40 @@
 {
+    "装备强化_8_1N装备强化": {
+        "recognition": "OCR",
+        "roi": [
+            675,
+            301,
+            182,
+            90
+        ],
+        "expected": [
+            "装备强化"
+        ],
+        "action": "Click",
+        "next": [
+            "=装备强化总流程"
+        ]
+    },
     "=装备强化总流程": {
         "recognition": "OCR",
         "expected": [
             "研发"
         ],
         "next": [
-            "装备强化"
+            "点击装备强化_8_1N装备强化"
         ]
     },
-    "装备强化": {
+    "点击装备强化_8_1N装备强化": {
         "recognition": "OCR",
         "expected": [
             "装备强化"
         ],
         "action": "Click",
         "next": [
-            "选择强化的装备"
+            "选择强化的装备_8_1N装备强化"
         ]
     },
-    "选择强化的装备": {
+    "选择强化的装备_8_1N装备强化": {
         "recognition": "TemplateMatch",
         "template": "storage/slct_equip.png",
         "action": "Click",
@@ -30,10 +46,10 @@
         ],
         "post_delay": 1500,
         "next": [
-            "选择高级装备"
+            "选择高级装备_8_1N装备强化"
         ]
     },
-    "选择高级装备": {
+    "选择高级装备_8_1N装备强化": {
         "recognition": "TemplateMatch",
         "template": [
             "storage/g_equip2.png",
@@ -44,30 +60,30 @@
         "threshold": 0.9,
         "action": "Click",
         "next": [
-            "选择低级装备",
-            "选择高级装备"
+            "选择低级装备_8_1N装备强化",
+            "选择高级装备_8_1N装备强化"
         ]
     },
-    "选择低级装备": {
+    "选择低级装备_8_1N装备强化": {
         "recognition": "TemplateMatch",
         "template": "storage/stdby.png",
         "action": "Click",
         "next": [
-            "强制点击至无智能选择"
+            "强制点击至无智能选择_8_1N装备强化"
         ]
     },
-    "强制点击至无智能选择": {
+    "强制点击至无智能选择_8_1N装备强化": {
         "recognition": "OCR",
         "expected": [
             "智能选择"
         ],
         "action": "Click",
         "next": [
-            "强制点击至无智能选择",
-            "装备强化选择确定"
+            "强制点击至无智能选择_8_1N装备强化",
+            "装备强化选择确定_8_1N装备强化"
         ]
     },
-    "装备强化选择确定": {
+    "装备强化选择确定_8_1N装备强化": {
         "recognition": "OCR",
         "expected": [
             "确定"
@@ -75,10 +91,10 @@
         "action": "Click",
         "post_delay": 1500,
         "next": [
-            "装备强化确定"
+            "装备强化确定_8_1N装备强化"
         ]
     },
-    "装备强化确定": {
+    "装备强化确定_8_1N装备强化": {
         "recognition": "OCR",
         "expected": [
             "确定"
@@ -86,11 +102,11 @@
         "post_delay": 1000,
         "action": "Click",
         "next": [
-            "装备强化最终确定",
-            "进入导航栏"
+            "装备强化最终确定_8_1N装备强化",
+            "进入导航栏_8_1N装备强化"
         ]
     },
-    "装备强化最终确定": {
+    "装备强化最终确定_8_1N装备强化": {
         "recognition": "OCR",
         "expected": [
             "确定"
@@ -98,10 +114,10 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "进入导航栏"
+            "进入导航栏_8_1N装备强化"
         ]
     },
-    "进入导航栏": {
+    "进入导航栏_8_1N装备强化": {
         "recognition": "TemplateMatch",
         "roi": [
             124,
@@ -113,10 +129,10 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "导航栏战斗"
+            "导航栏战斗_8_1N装备强化"
         ]
     },
-    "导航栏战斗": {
+    "导航栏战斗_8_1N装备强化": {
         "recognition": "TemplateMatch",
         "roi": [
             80,

@@ -1,0 +1,257 @@
+{
+    "布置完成_8_1N部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            930,
+            93,
+            300,
+            240
+        ],
+        "template": "combat/8-1N/team2_map.png",
+        "next": [
+            "弹药检查_8_1N部署"
+        ]
+    },
+    "炸狗队布置_8_1N部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            100,
+            470,
+            300,
+            240
+        ],
+        "template": "combat/8-1N/port_exp.png",
+        "action": "Click",
+        "next": [
+            "布置完成_8_1N部署",
+            "炸狗队确定_8_1N部署",
+            "炸狗队布置_8_1N部署",
+            "炸狗队布置进入编成修正_8_1N部署"
+        ]
+    },
+    "炸狗队布置进入编成修正_8_1N部署": {
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/back2map.png",
+        "action": "Click",
+        "next": [
+            "炸狗队布置_8_1N部署"
+        ]
+    },
+    "炸狗队确定_8_1N部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            933,
+            556,
+            180,
+            100
+        ],
+        "template": "combat/8-1N/dplyconfirm.png",
+        "target": [
+            996,
+            608,
+            5,
+            5
+        ],
+        "action": "Click",
+        "next": [
+            "单zas队布置_8_1N部署"
+        ]
+    },
+    "单zas队确定_8_1N部署": {
+        "recognition": "OCR",
+        "roi": [
+            933,
+            556,
+            180,
+            100
+        ],
+        "expected": [
+            "确定"
+        ],
+        "action": "Click",
+        "next": [
+            "狗粮队布置_8_1N部署"
+        ]
+    },
+    "狗粮队布置_8_1N部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            850,
+            450,
+            300,
+            240
+        ],
+        "template": "combat/8-1N/port_abd.png",
+        "action": "Click",
+        "next": [
+            "狗粮队确定_8_1N部署",
+            "狗粮队布置_8_1N部署"
+        ],
+        "interrupt": [
+            "重装机场选择梯队_8_1N部署"
+        ]
+    },
+    "单zas队布置_8_1N部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            930,
+            93,
+            300,
+            240
+        ],
+        "template": "combat/8-1N/port_zas.png",
+        "action": "Click",
+        "post_delay": 1500,
+        "pre_delay": 1500,
+        "next": [
+            "单zas队确定_8_1N部署",
+            "单zas队布置_8_1N部署"
+        ],
+        "interrupt": [
+            "重装机场选择梯队_8_1N部署"
+        ]
+    },
+    "狗粮队确定_8_1N部署": {
+        "recognition": "OCR",
+        "roi": [
+            933,
+            556,
+            180,
+            100
+        ],
+        "expected": [
+            "确定"
+        ],
+        "action": "Click",
+        "post_delay": 1200,
+        "next": [
+            "弹药检查_8_1N部署"
+        ]
+    },
+    "重装机场选择梯队_8_1N部署": {
+        "recognition": "OCR",
+        "expected": "选择梯队",
+        "action": "Click"
+    },
+    "弹药检查_8_1N部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            930,
+            93,
+            300,
+            240
+        ],
+        "template": [
+            "combat/8-1N/port_zas.png",
+            "combat/8-1N/team2_map.png"
+        ],
+        "action": "Click",
+        "post_delay": 1500,
+        "threshold": 0.8,
+        "next": [
+            "弹药判断有_8_1N部署",
+            "弹药判断无_8_1N部署",
+            "弹药检查_8_1N部署",
+            "点击部署界面2队_8_1N部署",
+            "弹药检查_8_1N部署修正识别"
+        ]
+    },
+    "弹药检查_8_1N部署修正识别": {
+        "recognition": "OCR",
+        "roi": [
+            724,
+            43,
+            294,
+            90
+        ],
+        "expected": "第二梯队",
+        "action": "Click",
+        "target": [
+            60,
+            70,
+            10,
+            10
+        ],
+        "pre_delay": 1000,
+        "post_delay": 1000,
+        "next": [
+            "弹药检查_8_1N部署修正识别",
+            "弹药检查_8_1N部署修正拖动"
+        ]
+    },
+    "弹药检查_8_1N部署修正拖动": {
+        "action": "Swipe",
+        "begin": [
+            300,
+            654,
+            1,
+            1
+        ],
+        "end": [
+            790,
+            450,
+            1,
+            1
+        ],
+        "duration": 600,
+        "next": [
+            "弹药判断无_8_1N部署",
+            "弹药判断有_8_1N部署",
+            "弹药检查_8_1N部署",
+            "点击部署界面2队_8_1N部署",
+            "弹药检查_8_1N部署修正识别"
+        ]
+    },
+    "点击部署界面2队_8_1N部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            10,
+            220,
+            140,
+            100
+        ],
+        "template": "combat/8-1N/team2_dply.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "弹药检查_8_1N部署",
+            "点击部署界面2队_8_1N部署"
+        ]
+    },
+    "弹药判断无_8_1N部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            100,
+            160,
+            220,
+            450
+        ],
+        "template": "combat/8-1N/Gnoammo.png",
+        "green_mask": true,
+        "next": [
+            "无弹药不编成_8_1N部署"
+        ]
+    },
+    "弹药判断有_8_1N部署": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            100,
+            160,
+            220,
+            450
+        ],
+        "template": "combat/8-1N/fullammo.png",
+        "green_mask": true,
+        "next": [
+            "点击队伍编成_8_1N编队"
+        ]
+    },
+    "无弹药不编成_8_1N部署": {
+        "recognition": "OCR",
+        "expected": [
+            "取消"
+        ],
+        "action": "Click",
+        "next": "开始作战_8_1N战斗"
+    }
+}

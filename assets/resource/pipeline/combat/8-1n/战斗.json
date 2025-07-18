@@ -1,0 +1,416 @@
+{
+    "开始作战_8_1N战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "开始作战"
+        ],
+        "action": "Click",
+        "post_delay": 4000,
+        "next": [
+            "点击2队单zas准备补给_8_1N战斗",
+            "装备强化_8_1N装备强化"
+        ]
+    },
+    "点击2队单zas准备补给_8_1N战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            930,
+            93,
+            300,
+            240
+        ],
+        "template": "combat/8-1N/team2_map.png",
+        "action": "Click",
+        "pre_delay": 1000,
+        "post_delay": 1000,
+        "next": [
+            "点击补给_8_1N战斗",
+            "点击2队单zas准备补给_8_1N战斗",
+            "点击2队单zas准备补给_8_1N战斗修正识别"
+        ]
+    },
+    "点击2队单zas准备补给_8_1N战斗修正识别": {
+        "recognition": "OCR",
+        "roi": [
+            724,
+            43,
+            294,
+            90
+        ],
+        "expected": "第二梯队",
+        "action": "Click",
+        "target": [
+            60,
+            70,
+            10,
+            10
+        ],
+        "pre_delay": 1000,
+        "post_delay": 1000,
+        "next": [
+            "点击2队单zas准备补给_8_1N战斗修正识别",
+            "点击2队单zas准备补给_8_1N战斗修正拖动"
+        ]
+    },
+    "点击2队单zas准备补给_8_1N战斗修正拖动": {
+        "action": "Swipe",
+        "begin": [
+            300,
+            654,
+            1,
+            1
+        ],
+        "end": [
+            790,
+            450,
+            1,
+            1
+        ],
+        "duration": 600,
+        "next": [
+            "点击补给_8_1N战斗",
+            "点击2队单zas准备补给_8_1N战斗",
+            "点击2队单zas准备补给_8_1N战斗修正识别"
+        ]
+    },
+    "点击补给_8_1N战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "补给"
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "点击2队单zas_8_1N战斗"
+        ]
+    },
+    "点击2队单zas_8_1N战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            930,
+            93,
+            300,
+            240
+        ],
+        "template": "combat/8-1N/team2_map.png",
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "点击2队撤离_8_1N战斗",
+            "点击2队单zas_8_1N战斗",
+            "点击2队单zas_8_1N战斗修正识别"
+        ]
+    },
+    "点击2队单zas_8_1N战斗修正识别": {
+        "recognition": "OCR",
+        "roi": [
+            724,
+            43,
+            294,
+            90
+        ],
+        "expected": "第二梯队",
+        "action": "Click",
+        "target": [
+            60,
+            70,
+            10,
+            10
+        ],
+        "pre_delay": 1000,
+        "post_delay": 1000,
+        "next": [
+            "点击2队单zas_8_1N战斗修正识别",
+            "点击2队单zas_8_1N战斗修正拖动"
+        ]
+    },
+    "点击2队单zas_8_1N战斗修正拖动": {
+        "action": "Swipe",
+        "begin": [
+            300,
+            654,
+            1,
+            1
+        ],
+        "end": [
+            790,
+            450,
+            1,
+            1
+        ],
+        "duration": 600,
+        "next": [
+            "点击2队撤离_8_1N战斗",
+            "点击2队单zas_8_1N战斗",
+            "点击2队单zas_8_1N战斗修正识别"
+        ]
+    },
+    "点击2队撤离_8_1N战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "撤离"
+        ],
+        "action": "Click",
+        "next": [
+            "点击2队撤离确定_8_1N战斗"
+        ]
+    },
+    "点击2队撤离确定_8_1N战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "确定"
+        ],
+        "action": "Click",
+        "next": [
+            "点击1队图标_8_1N战斗"
+        ]
+    },
+    "点击1队图标_8_1N战斗": {
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/expteam_map.png",
+        "roi": [
+            100,
+            470,
+            300,
+            240
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "点击1队取消_8_1N战斗",
+            "点击1队图标_8_1N战斗",
+            "点击1队图标_8_1N修正识别"
+        ]
+    },
+    "点击1队图标_8_1N修正识别": {
+        "recognition": "OCR",
+        "roi": [
+            724,
+            43,
+            294,
+            90
+        ],
+        "expected": "第一梯队",
+        "action": "Click",
+        "target": [
+            60,
+            70,
+            10,
+            10
+        ],
+        "pre_delay": 1000,
+        "post_delay": 1000,
+        "next": [
+            "点击1队图标_8_1N修正识别",
+            "点击1队图标_8_1N修正拖动"
+        ]
+    },
+    "点击1队图标_8_1N修正拖动": {
+        "action": "Swipe",
+        "begin": [
+            1022,
+            196,
+            1,
+            1
+        ],
+        "end": [
+            773,
+            405,
+            1,
+            1
+        ],
+        "duration": 600,
+        "next": [
+            "点击1队取消_8_1N战斗",
+            "点击1队图标_8_1N战斗",
+            "点击1队图标_8_1N修正识别"
+        ]
+    },
+    "点击1队取消_8_1N战斗": {
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/cancel.png",
+        "action": "Click",
+        "post_delay": 1200,
+        "next": [
+            "点击计划模式_8_1N战斗"
+        ]
+    },
+    "点击计划模式_8_1N战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "计划模式"
+        ],
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "炸狗点1_8_1N战斗"
+        ]
+    },
+    "炸狗点1_8_1N战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            40,
+            250,
+            300,
+            300
+        ],
+        "template": "combat/8-1N/dog1.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "炸狗点1_8_1N战斗_确认",
+            "炸狗点1_8_1N战斗_OCR确认",
+            "炸狗点1_8_1N战斗"
+        ]
+    },
+    "炸狗点2_8_1N战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            200,
+            50,
+            250,
+            250
+        ],
+        "template": "combat/8-1N/dog2.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "炸狗点2_8_1N战斗_确认",
+            "炸狗点2_8_1N战斗_OCR确认",
+            "炸狗点2_8_1N战斗"
+        ]
+    },
+    "炸狗点1_8_1N战斗_确认": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            40,
+            250,
+            300,
+            300
+        ],
+        "template": [
+            "combat/8-1N/Gchoose1.png",
+            "combat/8-1N/Gchoose2.png",
+            "combat/8-1N/G03.png"
+        ],
+        "threshold": 0.75,
+        "green_mask": true,
+        "next": [
+            "炸狗点2_8_1N战斗"
+        ]
+    },
+    "炸狗点2_8_1N战斗_确认": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            200,
+            50,
+            250,
+            250
+        ],
+        "template": [
+            "combat/8-1N/Gchoose1.png",
+            "combat/8-1N/Gchoose2.png",
+            "combat/8-1N/G06.png"
+        ],
+        "green_mask": true,
+        "next": [
+            "执行计划_8_1N战斗"
+        ]
+    },
+    "炸狗点1_8_1N战斗_OCR确认": {
+        "recognition": "OCR",
+        "roi": [
+            40,
+            250,
+            300,
+            300
+        ],
+        "expected": [
+            "03"
+        ],
+        "next": [
+            "炸狗点2_8_1N战斗"
+        ]
+    },
+    "炸狗点2_8_1N战斗_OCR确认": {
+        "recognition": "OCR",
+        "roi": [
+            200,
+            50,
+            250,
+            250
+        ],
+        "expected": [
+            "06"
+        ],
+        "green_mask": true,
+        "next": [
+            "执行计划_8_1N战斗"
+        ]
+    },
+    "执行计划_8_1N战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "执行计划"
+        ],
+        "action": "Click",
+        "next": [
+            "梯队遇敌_8_1N战斗",
+            "加速结算_8_1N战斗",
+            "跳过获得装备_8_1N战斗",
+            "剩余行动01_8_1N战斗"
+        ]
+    },
+    "梯队遇敌_8_1N战斗": {
+        "recognition": "OCR",
+        "roi": [
+            300,
+            100,
+            380,
+            270
+        ],
+        "expected": "794",
+        "post_delay": 8000,
+        "next": [
+            "加速结算_8_1N战斗",
+            "跳过获得装备_8_1N战斗",
+            "梯队遇敌_8_1N战斗",
+            "剩余行动01_8_1N战斗"
+        ]
+    },
+    "跳过获得装备_8_1N战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            0,
+            4,
+            120,
+            127
+        ],
+        "template": "combat/8-1N/eqip_get.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "next": [
+            "跳过获得装备_8_1N战斗",
+            "剩余行动01_8_1N战斗",
+            "梯队遇敌_8_1N战斗",
+            "加速结算_8_1N战斗"
+        ]
+    },
+    "加速结算_8_1N战斗": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            5,
+            270,
+            75
+        ],
+        "expected": "战斗结算",
+        "action": "Click",
+        "next": [
+            "剩余行动01_8_1N战斗",
+            "梯队遇敌_8_1N战斗",
+            "跳过获得装备_8_1N战斗",
+            "加速结算_8_1N战斗"
+        ]
+    }
+}

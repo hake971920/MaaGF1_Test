@@ -1,0 +1,105 @@
+{
+    "点击队伍编成_8_1N编队": {
+        "roi": [
+            114,
+            551,
+            234,
+            97
+        ],
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/dwbc.png",
+        "target": [
+            183,
+            597,
+            77,
+            13
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "选择2队zas_8_1N编队"
+        ]
+    },
+    "选择2队zas_8_1N编队": {
+        "recognition": "OCR",
+        "expected": [
+            "Zas",
+            "M21"
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "显示全部_8_1N编队",
+            "点击队伍编成_8_1N编队"
+        ]
+    },
+    "显示全部_8_1N编队": {
+        "recognition": "OCR",
+        "expected": [
+            "显示全部"
+        ],
+        "action": "Click",
+        "next": [
+            "选择收藏角色_8_1N编队"
+        ]
+    },
+    "选择收藏角色_8_1N编队": {
+        "recognition": "OCR",
+        "expected": [
+            "显示收藏角色"
+        ],
+        "action": "Click",
+        "next": [
+            "选择收藏角色确认_8_1N编队"
+        ]
+    },
+    "选择收藏角色确认_8_1N编队": {
+        "recognition": "OCR",
+        "expected": [
+            "确认"
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "点击队伍中的Zas_8_1N编队"
+        ]
+    },
+    "点击队伍中的Zas_8_1N编队": {
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/zas_in_team.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "点击1队Zas_8_1N编队"
+        ]
+    },
+    "点击1队Zas_8_1N编队": {
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/zas_team1.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "确定_8_1N编队"
+        ]
+    },
+    "确定_8_1N编队": {
+        "recognition": "OCR",
+        "expected": [
+            "确定"
+        ],
+        "action": "Click",
+        "next": [
+            "返回地图_8_1N编队"
+        ]
+    },
+    "返回地图_8_1N编队": {
+        "recognition": "TemplateMatch",
+        "template": "combat/8-1N/back2map.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "开始作战_8_1N战斗",
+            "返回地图_8_1N编队"
+        ]
+    }
+}
