@@ -38,7 +38,7 @@
 
 ### 8-1N双Zas炸狗
 
-见[8-1N双Zas炸狗使用手册](https://cdn.jsdelivr.net/gh/LeonNagant/MaaGF1_Test/manual/8-1N双Zas炸狗使用手册.md)
+见[8-1N双Zas炸狗使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8CZas%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)
 
 ---
 
@@ -56,7 +56,7 @@
 
 3.修复了装备强化时卡在点击确定的bug
 
-4.增加了8-1N的使用说明[8-1N双Zas炸狗使用手册](https://cdn.jsdelivr.net/gh/LeonNagant/MaaGF1_Test/manual/8-1N双Zas炸狗使用手册.md)
+4.增加了8-1N的使用说明[8-1N双Zas炸狗使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8CZas%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)
 
 _测试用的笔记本电脑坏了，调试速度会慢，更新可能受到影响:(_
 
