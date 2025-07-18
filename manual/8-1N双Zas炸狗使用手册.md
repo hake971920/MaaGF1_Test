@@ -29,5 +29,5 @@
 ## 流程图
 
 <p align="center">
-  <img alt="example" src="https://cdn.jsdelivr.net/gh/LeonNagant/MaaGF1_Test/example_img/8-1N/mermaid.png" width="600" height="518" />
+  <img alt="example" src="https://cdn.jsdelivr.net/gh/LeonNagant/MaaGF1_Test/example_img/8-1N/mermaid.png" width="800" height="512" />
 </p>
