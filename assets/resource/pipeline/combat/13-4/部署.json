@@ -230,6 +230,7 @@
             "取消"
         ],
         "action": "Click",
+        "post_delay": 500,
         "next": "开始作战_134战斗"
     }
 }
