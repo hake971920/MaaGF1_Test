@@ -8,7 +8,7 @@
 
 1.pip安装需要有良好的网络环境，您可能会需要科学上网
 
-2.[MaaDebugger](https://github.com/MaaXYZ/MaaDebugger)官方提供的打开方式为
+2.官网打开方式为
 
 	python -m MaaDebugger
 	
@@ -28,3 +28,9 @@
 
 	
 	python -m MaaDebugger --host 0.0.0.0 --port 1145
+	
+3.进入网页后有以下几项需要设置：
+
+    Screencap Method = Screencap_GDI
+
+    Input Method = Input_Seize
