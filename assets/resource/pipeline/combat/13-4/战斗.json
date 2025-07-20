@@ -381,14 +381,8 @@
         "timeout": 40000
     },
     "梯队遇敌_134战斗": {
-        "recognition": "OCR",
-        "roi": [
-            300,
-            100,
-            380,
-            270
-        ],
-        "expected": "794",
+        "recognition": "TemplateMatch",
+        "template": "combat/134/794.png",
         "post_delay": 10000,
         "rate_limit": 1000,
         "next": [

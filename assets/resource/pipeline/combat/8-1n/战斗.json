@@ -398,14 +398,8 @@
         ]
     },
     "梯队遇敌_8_1N战斗": {
-        "recognition": "OCR",
-        "roi": [
-            300,
-            100,
-            380,
-            270
-        ],
-        "expected": "794",
+        "recognition": "TemplateMatch",
+        "template": "combat/134/794.png",
         "rate_limit": 2000,
         "post_delay": 4000,
         "timeout": 60000,
