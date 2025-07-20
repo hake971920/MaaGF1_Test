@@ -26,6 +26,7 @@
         ],
         "template": "combat/8-1N/expteam_map.png",
         "action": "Click",
+        "rate_limit": 200,
         "next": [
             "点击1队图标_8_1N重置",
             "点击1队撤离_8_1N重置",

@@ -23,6 +23,7 @@
         "action": "Click",
         "pre_delay": 1000,
         "post_delay": 1000,
+        "rate_limit": 200,
         "next": [
             "点击补给_8_1N战斗",
             "点击2队单zas准备补给_8_1N战斗",
@@ -195,6 +196,7 @@
         ],
         "action": "Click",
         "post_delay": 800,
+        "rate_limit": 200,
         "next": [
             "点击1队取消_8_1N战斗",
             "点击1队图标_8_1N战斗",
@@ -398,7 +400,9 @@
             270
         ],
         "expected": "794",
-        "post_delay": 8000,
+        "rate_limit": 2000,
+        "post_delay": 4000,
+        "timeout": 60000,
         "next": [
             "加速结算_8_1N战斗",
             "跳过获得装备_8_1N战斗",
@@ -417,6 +421,8 @@
         "template": "combat/8-1N/eqip_get.png",
         "action": "Click",
         "threshold": 0.58,
+        "rate_limit": 200,
+        "timeout": 60000,
         "next": [
             "跳过获得装备_8_1N战斗",
             "剩余行动01_8_1N战斗",
@@ -433,6 +439,8 @@
             75
         ],
         "expected": "战斗结算",
+        "rate_limit": 200,
+        "timeout": 60000,
         "action": "Click",
         "next": [
             "剩余行动01_8_1N战斗",

@@ -8,6 +8,7 @@
             240
         ],
         "template": "combat/8-1N/team2_map.png",
+        "rate_limit": 200,
         "next": [
             "弹药检查_8_1N部署"
         ]
@@ -147,6 +148,7 @@
         ],
         "action": "Click",
         "post_delay": 1500,
+        "rate_limit": 200,
         "threshold": 0.8,
         "next": [
             "弹药判断有_8_1N部署",
