@@ -1,0 +1,141 @@
+{
+    "人形回收_134人形回收": {
+        "recognition": "OCR",
+        "expected": "人形回收",
+        "roi": [
+            475,
+            302,
+            156,
+            81
+        ],
+        "action": "Click",
+        "next": [
+            "=人形回收总流程_134人形回收"
+        ]
+    },
+    "=人形回收总流程_134人形回收": {
+        "recognition": "OCR",
+        "expected": [
+            "工厂"
+        ],
+        "next": [
+            "点击选择角色_134人形回收"
+        ]
+    },
+    "点击选择角色_134人形回收": {
+        "recognition": "OCR",
+        "expected": [
+            "角色"
+        ],
+        "action": "Click",
+        "next": [
+            "无角色可选_134人形回收",
+            "智能选择_134人形回收",
+            "点击选择角色_134人形回收"
+        ]
+    },
+    "无角色可选_134人形回收": {
+        "recognition": "OCR",
+        "expected": [
+            "没有"
+        ],
+        "next": [
+            "进入导航栏_134人形回收"
+        ]
+    },
+    "智能选择_134人形回收": {
+        "recognition": "OCR",
+        "expected": [
+            "智能选择"
+        ],
+        "action": "Click",
+        "next": [
+            "手动选择_134人形回收",
+            "人形拆解选择确定_134人形回收"
+        ]
+    },
+    "手动选择_134人形回收": {
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "template": [
+            "storage/Gframe0.png",
+            "storage/Gframe1.png",
+            "storage/Gframe2.png"
+        ],
+        "threshold": 0.85,
+        "action": "Click",
+        "next": [
+            "手动选择_134人形回收",
+            "人形拆解选择确定_134人形回收"
+        ]
+    },
+    "人形拆解选择确定_134人形回收": {
+        "recognition": "OCR",
+        "expected": [
+            "确定"
+        ],
+        "action": "Click",
+        "next": [
+            "回收_134人形回收"
+        ]
+    },
+    "回收_134人形回收": {
+        "recognition": "OCR",
+        "roi": [
+            899,
+            582,
+            202,
+            70
+        ],
+        "expected": [
+            "回收"
+        ],
+        "action": "Click",
+        "next": [
+            "强制确定_134人形回收"
+        ]
+    },
+    "强制确定_134人形回收": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            640,
+            590,
+            49,
+            24
+        ],
+        "post_delay": 1000,
+        "next": [
+            "点击选择角色_134人形回收"
+        ]
+    },
+    "进入导航栏_134人形回收": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            124,
+            18,
+            120,
+            105
+        ],
+        "template": "storage/navi.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "导航栏战斗_134人形回收"
+        ]
+    },
+    "导航栏战斗_134人形回收": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            80,
+            150,
+            100,
+            150
+        ],
+        "template": "storage/navi_combat.png",
+        "action": "Click",
+        "next": [
+            "=134总流程"
+        ]
+    }
+}

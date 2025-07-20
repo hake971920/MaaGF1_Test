@@ -1,0 +1,43 @@
+{
+    "再次作战_134重置": {
+        "recognition": "OCR",
+        "roi": [
+            277,
+            572,
+            188,
+            73
+        ],
+        "expected": [
+            "再次作战"
+        ],
+        "action": "Click",
+        "next": [
+            "布置完成_134部署",
+            "人形回收_134人形回收",
+            "再次作战_134重置",
+            "点击获得角色_134重置"
+        ]
+    },
+    "点击获得角色_134重置": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            900,
+            30,
+            250,
+            181
+        ],
+        "template": [
+            "combat/134/doll_get0.png",
+            "combat/134/doll_get2.png",
+            "combat/134/doll_get3.png",
+            "combat/134/doll_get4.png"
+        ],
+        "action": "Click",
+        "threshold": 0.75,
+        "next": [
+            "点击获得角色_134重置",
+            "再次作战_134重置"
+        ],
+        "timeout": 40000
+    }
+}

@@ -1,0 +1,438 @@
+{
+    "开始作战_134战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "开始作战"
+        ],
+        "action": "Click",
+        "post_delay": 4000,
+        "next": [
+            "点击2队单vv准备补给_134战斗"
+        ]
+    },
+    "点击2队单vv准备补给_134战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            149,
+            342,
+            151,
+            164
+        ],
+        "template": "combat/134/team2_map.png",
+        "action": "Click",
+        "pre_delay": 1000,
+        "post_delay": 1000,
+        "next": [
+            "点击补给_134战斗",
+            "点击2队单vv准备补给_134战斗",
+            "点击2队单vv准备补给_134战斗修正识别"
+        ]
+    },
+    "点击2队单vv准备补给_134战斗修正识别": {
+        "recognition": "OCR",
+        "roi": [
+            724,
+            43,
+            294,
+            90
+        ],
+        "expected": "第二梯队",
+        "action": "Click",
+        "target": [
+            60,
+            70,
+            10,
+            10
+        ],
+        "pre_delay": 1000,
+        "post_delay": 1000,
+        "next": [
+            "点击2队单vv准备补给_134战斗修正识别",
+            "点击2队单vv准备补给_134战斗修正拖动"
+        ]
+    },
+    "点击2队单vv准备补给_134战斗修正拖动": {
+        "recognition": "TemplateMatch",
+        "template": "combat/134/team2_map.png",
+        "roi": [
+            363,
+            343,
+            168,
+            165
+        ],
+        "action": "Swipe",
+        "begin": [
+            910,
+            415,
+            1,
+            1
+        ],
+        "end": [
+            667,
+            416,
+            1,
+            1
+        ],
+        "duration": 600,
+        "next": [
+            "点击补给_134战斗",
+            "点击2队单vv准备补给_134战斗",
+            "点击2队单vv准备补给_134战斗修正识别",
+            "点击2队单vv准备补给_134战斗修正拖动"
+        ]
+    },
+    "点击补给_134战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "补给"
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "取消2队选择_134战斗"
+        ]
+    },
+    "取消2队选择_134战斗": {
+        "recognition": "OCR",
+        "roi": [
+            2,
+            300,
+            100,
+            100
+        ],
+        "expected": "ong",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "点击1队图标_134战斗"
+        ]
+    },
+    "点击1队图标_134战斗": {
+        "recognition": "TemplateMatch",
+        "template": "combat/134/team1_map.png",
+        "roi": [
+            746,
+            251,
+            161,
+            156
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "点击1队取消_134战斗",
+            "点击1队图标_134战斗",
+            "点击1队图标_134修正识别"
+        ]
+    },
+    "点击1队图标_134修正识别": {
+        "recognition": "OCR",
+        "roi": [
+            724,
+            43,
+            294,
+            90
+        ],
+        "expected": "第一梯队",
+        "action": "Click",
+        "target": [
+            60,
+            70,
+            10,
+            10
+        ],
+        "pre_delay": 1000,
+        "post_delay": 1000,
+        "next": [
+            "点击1队图标_134修正识别",
+            "点击1队图标_134修正拖动"
+        ]
+    },
+    "点击1队图标_134修正拖动": {
+        "recognition": "TemplateMatch",
+        "template": "combat/134/team1_map.png",
+        "roi": [
+            561,
+            385,
+            65,
+            76
+        ],
+        "action": "Swipe",
+        "begin": [
+            180,
+            542,
+            1,
+            1
+        ],
+        "end": [
+            446,
+            440,
+            1,
+            1
+        ],
+        "duration": 600,
+        "next": [
+            "点击1队取消_134战斗",
+            "点击1队图标_134战斗",
+            "点击1队图标_134修正识别",
+            "点击1队图标_134修正拖动"
+        ]
+    },
+    "点击1队取消_134战斗": {
+        "recognition": "TemplateMatch",
+        "template": "combat/134/cancel.png",
+        "action": "Click",
+        "post_delay": 1200,
+        "next": [
+            "点击计划模式_134战斗"
+        ]
+    },
+    "点击计划模式_134战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "计划模式"
+        ],
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "巡游者_134战斗"
+        ]
+    },
+    "巡游者_134战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            655,
+            363,
+            147,
+            147
+        ],
+        "template": "combat/134/pos1.png",
+        "action": "Click",
+        "post_delay": 200,
+        "rate_limit": 500,
+        "next": [
+            "巡游者_134战斗_确认",
+            "巡游者_134战斗_OCR确认",
+            "巡游者_134战斗"
+        ]
+    },
+    "巡游者_134战斗_确认": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            655,
+            363,
+            147,
+            147
+        ],
+        "template": [
+            "combat/134/Gchoose1.png",
+            "combat/134/Gchoose2.png",
+            "combat/134/G02.png"
+        ],
+        "threshold": 0.75,
+        "green_mask": true,
+        "rate_limit": 500,
+        "next": [
+            "钢狮_134战斗"
+        ]
+    },
+    "巡游者_134战斗_OCR确认": {
+        "recognition": "OCR",
+        "roi": [
+            655,
+            363,
+            147,
+            147
+        ],
+        "expected": [
+            "2"
+        ],
+        "rate_limit": 500,
+        "next": [
+            "钢狮_134战斗"
+        ]
+    },
+    "钢狮_134战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            742,
+            538,
+            151,
+            141
+        ],
+        "template": "combat/134/pos2.png",
+        "action": "Click",
+        "post_delay": 200,
+        "rate_limit": 500,
+        "next": [
+            "钢狮_134战斗_确认",
+            "钢狮_134战斗_OCR确认",
+            "钢狮_134战斗"
+        ]
+    },
+    "钢狮_134战斗_确认": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            742,
+            538,
+            151,
+            141
+        ],
+        "template": [
+            "combat/134/Gchoose1.png",
+            "combat/134/Gchoose2.png",
+            "combat/134/G05.png"
+        ],
+        "green_mask": true,
+        "rate_limit": 500,
+        "next": [
+            "终点_134战斗"
+        ]
+    },
+    "钢狮_134战斗_OCR确认": {
+        "recognition": "OCR",
+        "roi": [
+            742,
+            538,
+            151,
+            141
+        ],
+        "expected": [
+            "5"
+        ],
+        "green_mask": true,
+        "rate_limit": 500,
+        "next": [
+            "终点_134战斗"
+        ]
+    },
+    "终点_134战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            656,
+            542,
+            146,
+            143
+        ],
+        "template": "combat/134/pos3.png",
+        "action": "Click",
+        "post_delay": 200,
+        "rate_limit": 500,
+        "next": [
+            "终点_134战斗_确认",
+            "终点_134战斗_OCR确认",
+            "终点_134战斗"
+        ]
+    },
+    "终点_134战斗_确认": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            656,
+            582,
+            146,
+            100
+        ],
+        "threshold": 0.83,
+        "template": [
+            "combat/134/Gchoose1.png",
+            "combat/134/Gchoose2.png",
+            "combat/134/G10.png"
+        ],
+        "green_mask": true,
+        "rate_limit": 500,
+        "next": [
+            "执行计划_134战斗"
+        ]
+    },
+    "终点_134战斗_OCR确认": {
+        "recognition": "OCR",
+        "roi": [
+            656,
+            542,
+            146,
+            143
+        ],
+        "expected": [
+            "10"
+        ],
+        "green_mask": true,
+        "rate_limit": 500,
+        "next": [
+            "执行计划_134战斗"
+        ]
+    },
+    "执行计划_134战斗": {
+        "recognition": "OCR",
+        "expected": [
+            "执行计划"
+        ],
+        "action": "Click",
+        "next": [
+            "梯队遇敌_134战斗",
+            "加速结算_134战斗",
+            "跳过获得角色_134战斗",
+            "再次作战_134重置"
+        ],
+        "timeout": 40000
+    },
+    "梯队遇敌_134战斗": {
+        "recognition": "OCR",
+        "roi": [
+            300,
+            100,
+            380,
+            270
+        ],
+        "expected": "794",
+        "post_delay": 10000,
+        "rate_limit": 1000,
+        "next": [
+            "加速结算_134战斗",
+            "跳过获得角色_134战斗",
+            "梯队遇敌_134战斗",
+            "再次作战_134重置"
+        ],
+        "timeout": 40000
+    },
+    "跳过获得角色_134战斗": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            900,
+            30,
+            250,
+            181
+        ],
+        "template": [
+            "combat/134/doll_get0.png",
+            "combat/134/doll_get2.png",
+            "combat/134/doll_get3.png",
+            "combat/134/doll_get4.png"
+        ],
+        "action": "Click",
+        "threshold": 0.75,
+        "next": [
+            "跳过获得角色_134战斗",
+            "加速结算_134战斗",
+            "梯队遇敌_134战斗",
+            "再次作战_134重置"
+        ],
+        "timeout": 40000
+    },
+    "加速结算_134战斗": {
+        "recognition": "OCR",
+        "roi": [
+            0,
+            5,
+            270,
+            75
+        ],
+        "expected": "战斗结算",
+        "action": "Click",
+        "next": [
+            "梯队遇敌_134战斗",
+            "跳过获得角色_134战斗",
+            "加速结算_134战斗",
+            "再次作战_134重置"
+        ],
+        "timeout": 40000
+    }
+}

@@ -42,9 +42,24 @@
 
 ---
 
+### 兵棋自动挂机
+
+见[兵棋自动挂机使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/%E5%85%B5%E6%A3%8B%E8%87%AA%E5%8A%A8%E6%8C%82%E6%9C%BA%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)
+
+
 ### 其他功能开发中...
 
+---
+
 ## 开发日志
+
+### 2025.07.19（TestV0.2.0.20250719）
+
+0.修复若干bug
+
+1.增加PVE兵棋挂机功能及其说明
+
+---
 
 ### 2025.07.18（TestV0.1.2.20250718）
 
@@ -59,6 +74,8 @@
 4.增加了8-1N的使用说明[8-1N双Zas炸狗使用手册](https://github.com/LeonNagant/MaaGF1_Test/blob/main/manual/8-1N%E5%8F%8CZas%E7%82%B8%E7%8B%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)
 
 _测试用的笔记本电脑坏了，调试速度会慢，更新可能受到影响:(_
+
+---
 
 ### 2025.07.15（TestV0.1.0.20250715）
 
