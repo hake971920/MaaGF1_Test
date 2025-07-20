@@ -402,7 +402,7 @@
         "template": "combat/134/794.png",
         "rate_limit": 2000,
         "post_delay": 4000,
-        "timeout": 60000,
+        "timeout": 600000,
         "next": [
             "加速结算_8_1N战斗",
             "跳过获得装备_8_1N战斗",
@@ -422,7 +422,7 @@
         "action": "Click",
         "threshold": 0.58,
         "rate_limit": 200,
-        "timeout": 60000,
+        "timeout": 600000,
         "next": [
             "跳过获得装备_8_1N战斗",
             "剩余行动01_8_1N战斗",
@@ -440,7 +440,7 @@
         ],
         "expected": "战斗结算",
         "rate_limit": 200,
-        "timeout": 60000,
+        "timeout": 600000,
         "action": "Click",
         "next": [
             "剩余行动01_8_1N战斗",
