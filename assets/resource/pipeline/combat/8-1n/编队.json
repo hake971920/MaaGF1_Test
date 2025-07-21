@@ -66,7 +66,10 @@
     },
     "点击队伍中的Zas_8_1N编队": {
         "recognition": "TemplateMatch",
-        "template": "combat/8-1N/zas_in_team.png",
+        "template": [
+            "combat/8-1N/zas_in_team1.png",
+            "combat/8-1N/zas_in_team2.png"
+        ],
         "action": "Click",
         "post_delay": 1000,
         "next": [
