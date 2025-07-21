@@ -169,10 +169,10 @@
         "expected": "第二梯队",
         "action": "Click",
         "target": [
-            60,
-            70,
-            10,
-            10
+            539,
+            44,
+            15,
+            17
         ],
         "pre_delay": 1000,
         "post_delay": 1000,
