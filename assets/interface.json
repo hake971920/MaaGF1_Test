@@ -1,5 +1,11 @@
 {
-    "controller": [
+  "name": "MaaGF1_Test", 
+  "version":  "1.0.0.20250720", 
+  "mirrorchyan_rid":  null, 
+  "mirrorchyan_multiplatform":  false, 
+  "url":  "https://github.com/LeonNagant/MaaGF1_Test", 
+  "custom_title": "MaaGF1_Test", 
+  "controller": [
         {
             "name": "安卓端",
             "type": "Adb"
@@ -9,7 +15,9 @@
             "type": "Win32",
             "win32": {
                 "class_regex": ".*",
-                "window_regex": "少女前线"
+                "window_regex": "少女前线",
+                "input":1,
+                "Screencap":1
             }
         }
     ],
@@ -17,49 +25,34 @@
         {
             "name": "官服",
             "path": [
-                "{PROJECT_DIR}/resource"
-            ]
-        },
-        {
-            "name": "B 服",
-            "path": [
-                "{PROJECT_DIR}/resource",
-                "{PROJECT_DIR}/resource_bilibili"
+                "{PROJECT_DIR}/resource/"
             ]
         }
     ],
-    "agent": {
-        "child_exec": "python",
-        "child_args": [
-            "{PROJECT_DIR}/agent/main.py"
-        ]
+  "task": [
+    {
+      "name": "13-4循环",
+      "entry": "=134总流程",
+      "check": true,  
+      "doc": "请在第十三战役-普通界面或者进入13-4地图后的界面运行", 
+      "repeatable": true,  
+      "repeat_count": 1
     },
-    "task": [
-        {
-            "name": "8-1N",
-            "entry": "=8_1N总流程"
-        }
-    ],
-    "option": {
-        "任务选项1": {
-            "cases": [
-                {
-                    "name": "文本1",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本1"
-                        }
-                    }
-                },
-                {
-                    "name": "文本2",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
-                        }
-                    }
-                }
-            ]
-        }
+    {
+      "name": "8-1N循环",
+      "entry": "=8_1N总流程",
+      "check": true,  
+      "doc": "请在第八战役-夜战或者进入8-1N地图后的界面运行", 
+      "repeatable": true,  
+      "repeat_count": 1
+    },
+    {
+      "name": "兵棋挂机循环",
+      "entry": "=兵棋总流程",
+      "check": true,  
+      "doc": "请在咖啡馆点击兵棋桌后或兵棋房间内运行", 
+      "repeatable": true,  
+      "repeat_count": 1
     }
+  ]
 }
