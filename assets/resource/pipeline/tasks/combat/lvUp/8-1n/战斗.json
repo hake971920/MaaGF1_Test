@@ -177,6 +177,7 @@
             "撤离"
         ],
         "action": "Click",
+        "post_delay": 400,
         "next": [
             "点击2队撤离确定_8_1N战斗"
         ]
@@ -186,6 +187,7 @@
         "expected": [
             "确定"
         ],
+        "post_delay": 800,
         "action": "Click",
         "next": [
             "点击1队图标_8_1N战斗"
